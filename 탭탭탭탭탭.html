@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>탭탭탭탭탭탭</title>
+    <style>
+        html, body{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        .wrapper{
+            margin:0 auto;
+            width:1000px;
+        }
+        .wrapper .js_btn{
+            display:flex;
+            height:50px
+        }
+        .wrapper .js_btn .tab_btn{
+            flex:1;
+            height:100%;
+            border:0;
+            background:#fff;
+        }
+        .wrapper .js_btn .tab_btn.on{
+            color:#fff;
+            background: pink;
+        }
+        .wrapper .js_con .container{
+            display:none;
+            height:80vh;
+            border:1px solid #000;
+        }
+        .wrapper .js_con .container.on{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="js_btn">
+            <button type="button" class="tab_btn" onclick="tabOpen(event , 'tab1')"> 버튼1</button>
+            <button type="button" class="tab_btn" onclick="tabOpen(event , 'tab2')">버튼2</button>
+            <button type="button" class="tab_btn" onclick="tabOpen(event , 'tab3')">버튼3</button>
+        </div>
+        <div class="js_con">
+            <div class="container on" id="tab1">섹션1</div>
+            <div class="container" id="tab2">섹션2</div>
+            <div class="container" id="tab3">섹션3</div>
+        </div>
+    </div>
+    
+    <script>
+        let tabOpen = (e , name) => {
+            let i , tabBtn , tabCon ;
+            let target = document.currentTarget ; // 이거 잘 이용히먄 될 거같은데...흠 
+            
+            tabCon = document.getElementsByClassName('container');
+            for( i = 0; i < tabCon.length; i++){
+                tabCon[i].style.display = "none";
+            }
+            tabBtn = document.getElementsByClassName('tab_btn');
+            for( i = 0; i < tabBtn.length; i++){
+                tabBtn[i].className = tabBtn[i].className.replace("on" , "");
+            }
+            document.getElementById(name).style.display = "block";
+            e.currentTarget += "on";
+            console.log(tabBtn);
+        }
+    </script>
+    
+</body>
+</html>
