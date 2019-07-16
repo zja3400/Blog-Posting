@@ -55,6 +55,9 @@
         let tabOpen = (e , name) => {
             let i , tabBtn , tabCon ;
             let target = document.currentTarget ; // 이거 잘 이용히먄 될 거같은데...흠 
+            e.currentTarget ; // 이거 잘 이용히먄 될 거같은데...흠 
+            
+            console.log(e);
             
             tabCon = document.getElementsByClassName('container');
             for( i = 0; i < tabCon.length; i++){
