@@ -52,13 +52,10 @@
     </div>
     
     <script>
-        let tabOpen = (e , name) => {
+        let tabOpen = (e , name) => { // target , name
             let i , tabBtn , tabCon ;
-            let target = document.currentTarget ; // 이거 잘 이용히먄 될 거같은데...흠 
-            target.classList.add = "on" ; // 이거 잘 이용히먄 될 거같은데...흠 
-            
-        
-            
+            //let target = document.currentTarget ; // 이거 잘 이용히먄 될 거같은데...흠 
+            //target.classList.add = "on" ; // 이거 잘 이용히먄 될 거같은데...흠     
             //console.log(e);
             
             tabCon = document.getElementsByClassName('container');
@@ -70,7 +67,7 @@
                 tabBtn[i].className = tabBtn[i].className.replace("on" , "");
             }
             document.getElementById(name).style.display = "block";
-            e.currentTarget += "on";
+            e.currentTarget.className += " on";
             console.log(tabBtn);
         }
     </script>
