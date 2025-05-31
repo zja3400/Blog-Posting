@@ -69,7 +69,7 @@ button {
 > **IE가 공식적으로 종료되었고**,  
 → 대부분의 브라우저들은 대부분 `all: unset`을 **완벽히 지원**함
 
-<img src="./images/css/250406_css_unset_img_02.png" width="100%" alt="버튼"><br>
+<img src="./asset/images/css/250406_css_unset_img_02.png" width="100%" alt="버튼"><br>
 ✔️확인: [Can I use `all: unset`](https://caniuse.com/?search=all%3A%20unset)  
 → IE/Opera Mini 제외하면 전부 OK!
 
